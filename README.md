@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>User-Fillable Table</title>
+    <title>CARIOCA</title>
     <style>
         table {
             border-collapse: collapse;
@@ -53,7 +52,7 @@
     <table id="myTable">
         <thead>
             <tr>
-                <th></th> <!-- Empty cell in row 1 column 1 -->
+                <th>Column 1</th> <!-- Empty cell in row 1 column 1 -->
                 <th>Column 2</th>
                 <th>Column 3</th>
                 <th>Column 4</th>
