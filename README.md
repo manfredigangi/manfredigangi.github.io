@@ -49,7 +49,15 @@
         }
     </script>
 </head>
+
 <body>
+    <!-- PIN input -->
+    <div id="pin-page">
+        <h1>Enter PIN</h1>
+        <label for="pin">PIN:</label>
+        <input type="password" id="pin">
+        <button onclick="showPreloader()">Submit</button>
+    </div>
     <!-- Preloader -->
     <div id="preloader" class="preloader">
         <!-- Insert your preloader GIF here -->
@@ -61,12 +69,6 @@
         <!-- Blank white page -->
     </div>
     
-    <!-- PIN input -->
-    <div id="pin-page">
-        <h1>Enter PIN</h1>
-        <label for="pin">PIN:</label>
-        <input type="password" id="pin">
-        <button onclick="showPreloader()">Submit</button>
-    </div>
+    
 </body>
 </html>
