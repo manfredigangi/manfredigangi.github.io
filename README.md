@@ -21,12 +21,39 @@
             width: 100%;
         }
     </style>
+    <script>
+        function calculateColumnSum(columnIndex) {
+            var table = document.getElementById("myTable");
+            var rows = table.getElementsByTagName("tr");
+            var sum = 0;
+
+            for (var i = 1; i < rows.length; i++) {
+                var row = rows[i];
+                var cell = row.getElementsByTagName("td")[columnIndex];
+                var value = parseFloat(cell.firstChild.value);
+
+                if (!isNaN(value)) {
+                    sum += value;
+                }
+            }
+
+            return sum;
+        }
+
+        function updateSum() {
+            var sumElement = document.getElementById("sum");
+            var columnIndex = parseInt(sumElement.getAttribute("data-column"));
+
+            var columnSum = calculateColumnSum(columnIndex);
+            sumElement.textContent = "Sum: " + columnSum;
+        }
+    </script>
 </head>
 <body>
-    <table>
+    <table id="myTable">
         <thead>
             <tr>
-                <th>Column 1</th>
+                <th></th> <!-- Empty cell in row 1 column 1 -->
                 <th>Column 2</th>
                 <th>Column 3</th>
                 <th>Column 4</th>
@@ -38,18 +65,171 @@
         </thead>
         <tbody>
             <tr>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
-                <td><input type="text"></td>
+                <td></td> <!-- Empty cell in row 1 column 1 -->
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
             </tr>
-            <!-- Repeat the above <tr> element for the remaining rows -->
+            <!-- Repeat the above <tr> element for the remaining 19 rows -->
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+                <td><input type="text" oninput="updateSum()"></td>
+            </tr>
+            <!-- Repeat this row for the remaining 18 rows -->
             <!-- Total 20 rows -->
         </tbody>
     </table>
+
+    <p id="sum" data-column="1">Sum: 0</p>
 </body>
 </html>
