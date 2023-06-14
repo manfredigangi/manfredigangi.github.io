@@ -2,46 +2,66 @@
 <head>
     <title>Protected Content</title>
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        
         .preloader {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .preloader img {
+            width: 200px;
+        }
+        
+        .content {
+            display: none;
         }
     </style>
     <script>
         function showPreloader() {
-            var preloader = document.getElementById("preloader");
             var pinInput = document.getElementById("pin").value;
 
             if (pinInput === "1234") {
-                preloader.style.display = "block";
-                setTimeout(showContent, 2000); // Simulating a delay of 2 seconds before showing the content
+                var preloader = document.getElementById("preloader");
+                var content = document.getElementById("content");
+                
+                preloader.style.display = "flex";
+                content.style.display = "none";
+                
+                setTimeout(function() {
+                    preloader.style.display = "none";
+                    content.style.display = "block";
+                }, 3000); // Show content after 3 seconds (3000 milliseconds)
             } else {
                 alert("Incorrect PIN. Access denied.");
             }
         }
-
-        function showContent() {
-            var preloader = document.getElementById("preloader");
-            preloader.style.display = "none";
-
-            var contentPage = document.getElementById("content-page");
-            contentPage.style.display = "block";
-        }
     </script>
 </head>
 <body>
+    <!-- Preloader -->
     <div id="preloader" class="preloader">
-        <img src="path_to_your_preloader.gif" alt="Loading...">
+        <!-- Insert your preloader GIF here -->
+        <!-- <img src="your_preloader.gif" alt="Preloader"> -->
     </div>
-
-    <div id="content-page" style="display: none;">
-        <h1>Protected Content</h1>
-        <p>CARIOCA</p>
+    
+    <!-- Content -->
+    <div id="content" class="content">
+        <!-- Blank white page -->
     </div>
-
+    
+    <!-- PIN input -->
     <div id="pin-page">
         <h1>Enter PIN</h1>
         <label for="pin">PIN:</label>
