@@ -53,7 +53,7 @@
     <!-- Preloader -->
     <div id="preloader" class="preloader">
         <!-- Insert your preloader GIF here -->
-        <!-- <img src="your_preloader.gif" alt="Preloader"> -->
+         <img src="d1dec4302ac31fd085ca7b45c56df7cb_w200.gif" alt="Preloader"> 
     </div>
     
     <!-- Content -->
